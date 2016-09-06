@@ -12,6 +12,7 @@
 		DD030A3F1D7E7F52003139BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD030A3D1D7E7F52003139BA /* Main.storyboard */; };
 		DD030A411D7E7F52003139BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD030A401D7E7F52003139BA /* Assets.xcassets */; };
 		DD030A441D7E7F52003139BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD030A421D7E7F52003139BA /* LaunchScreen.storyboard */; };
+		DD030A4C1D7E8446003139BA /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD030A4B1D7E8446003139BA /* SwiftCharts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DD030A401D7E7F52003139BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD030A431D7E7F52003139BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD030A451D7E7F52003139BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD030A4B1D7E8446003139BA /* SwiftCharts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftCharts.framework; path = Carthage/Build/iOS/SwiftCharts.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD030A4C1D7E8446003139BA /* SwiftCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +41,7 @@
 		DD030A2D1D7E7F52003139BA = {
 			isa = PBXGroup;
 			children = (
+				DD030A4B1D7E8446003139BA /* SwiftCharts.framework */,
 				DD030A381D7E7F52003139BA /* pruebaSwiftCharts */,
 				DD030A371D7E7F52003139BA /* Products */,
 			);
@@ -249,6 +253,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = pruebaSwiftCharts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Programador.pruebaSwiftCharts;
@@ -260,6 +268,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = pruebaSwiftCharts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Programador.pruebaSwiftCharts;
