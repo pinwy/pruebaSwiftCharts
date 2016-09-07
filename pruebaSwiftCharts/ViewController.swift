@@ -10,11 +10,19 @@ import UIKit
 import SwiftCharts
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var vista: UIView!
+    @IBOutlet weak var scrolView: UIScrollView!
+    
+    private var chart: Chart?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        self.scrolView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        let scrolViewHeight = self.scrolView.frame.height
+        let scrolViewWidth = self.scrolView.frame.width
+        self.scrolView.contentSize = CGSizeMake(900, 700)
         
         crearGrafica()
     }
@@ -28,28 +36,30 @@ class ViewController: UIViewController {
     
     func crearGrafica(){
         let chartConfig = BarsChartConfig(
-            valsAxisConfig: ChartAxisConfig(from: 0, to: 8, by: 2)
+            valsAxisConfig: ChartAxisConfig(from: 0, to: 600, by: 100)
         )
         
         let chart = BarsChart(
-            frame: CGRectMake(0, 70, 300, 500),
+            frame: CGRectMake(0, 70, 300, 600),
             chartConfig: chartConfig,
             xTitle: "X axis",
             yTitle: "Y axis",
             bars: [
-                ("A", 2),
-                ("B", 4.5),
-                ("C", 3),
-                ("D", 5.4),
-                ("E", 6.8),
-                ("F", 0.5)
+                ("2793.004", 522),
+                ("2793.004", 204),
+                ("2793.004", 110),
+                ("2793.004", 81),
+                ("2793.004", 53),
+                ("2793.004", 9),
+                ("2793.004", 4)
             ],
             color: UIColor.redColor(),
-            barWidth: 20
+            barWidth: 10
         )
         
-        self.view.addSubview(chart.view)
-        //self.chart = chart
+        self.vista
+            .addSubview(chart.view)
+        self.chart = chart
 
     }
 }
