@@ -12,8 +12,23 @@
 		DD030A3F1D7E7F52003139BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD030A3D1D7E7F52003139BA /* Main.storyboard */; };
 		DD030A411D7E7F52003139BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD030A401D7E7F52003139BA /* Assets.xcassets */; };
 		DD030A441D7E7F52003139BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD030A421D7E7F52003139BA /* LaunchScreen.storyboard */; };
-		DD030A4C1D7E8446003139BA /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD030A4B1D7E8446003139BA /* SwiftCharts.framework */; };
+		DDFF93511D7FC644005485DC /* SwiftCharts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD030A4B1D7E8446003139BA /* SwiftCharts.framework */; };
+		DDFF93521D7FC644005485DC /* SwiftCharts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DD030A4B1D7E8446003139BA /* SwiftCharts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DDFF93531D7FC644005485DC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DDFF93521D7FC644005485DC /* SwiftCharts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DD030A361D7E7F52003139BA /* pruebaSwiftCharts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pruebaSwiftCharts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,7 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD030A4C1D7E8446003139BA /* SwiftCharts.framework in Frameworks */,
+				DDFF93511D7FC644005485DC /* SwiftCharts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +93,7 @@
 				DD030A321D7E7F52003139BA /* Sources */,
 				DD030A331D7E7F52003139BA /* Frameworks */,
 				DD030A341D7E7F52003139BA /* Resources */,
+				DDFF93531D7FC644005485DC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -298,6 +314,7 @@
 				DD030A4A1D7E7F52003139BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
